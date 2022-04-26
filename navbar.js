@@ -13,9 +13,6 @@ function NavBar(){
             <a className="nav-link" data-toggle="tooltip" data-placement="bottom" title="enter your info here" href="#/CreateAccount/">Create Account<span className="tooltiptext"></span></a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" data-toggle="tooltip" data-placement="bottom" title="Login Here if you Already Have an Account" href="#/login/">Login<span className="tooltiptext"></span></a>
-          </li>
-          <li className="nav-item">
             <a className="nav-link" data-toggle="tooltip" data-placement="bottom" title="Make Deposit Here" href="#/deposit/">Deposit<span className="tooltiptext"></span></a>
           </li>
           <li className="nav-item">

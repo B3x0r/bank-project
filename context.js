@@ -1,7 +1,30 @@
 const Route       = ReactRouterDOM.Route;
 const Link        = ReactRouterDOM.Link;
 const HashRouter  = ReactRouterDOM.HashRouter;
-const UserContext = React.createContext(null);
+
+const UserContext = React.createContext();
+
+const UserProvider = ({ children }) => {
+  const [user, setUser] = React.useState({ name: 'foo', email: 'bar', password: 'baz'});
+  const [balance, setBalance] = React.useState(0);
+
+  const createAccount = (name, email, password) => {
+    setUser((user) => ({
+      name: name,
+      email: email,
+      password: password,
+    }));
+  };
+
+  const updateBalance = (balance) => {
+    setBalance(balance)
+  }
+  return (
+    <UserContext.Provider value={{ user, createAccount, updateBalance, balance}}>
+      {children}
+      </UserContext.Provider>
+  );
+}
 
 function Card(props){
     function classes(){

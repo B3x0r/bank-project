@@ -1,5 +1,13 @@
 function Balance(){
+  const [show, setShow]         = React.useState(true);
+  const {balance} = React.useContext(UserContext); 
+
   return (
-    <h1>Balance</h1>
-  )
+    <Card
+      bgcolor="info"
+      txtcolor="black"
+      title="Balance"
+      text={"$" + balance}
+    />    
+  );  
 }
