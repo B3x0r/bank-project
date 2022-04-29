@@ -2,8 +2,8 @@
 function Deposit(){
   const [show, setShow]         = React.useState(true);
   const [status, setStatus]     = React.useState('');
-  const [add, setAdd] = React.useState('');
-  const {balance, setBalance} = React.useContext(UserContext);    
+  const [add, setAdd] = React.useState(0);
+  const {balance, updateBalance} = React.useContext(UserContext);    
 
   function validate(field, label){
       if (!field) {
@@ -15,10 +15,12 @@ function Deposit(){
   }
 
   function handleCreate(){
+    console.log(add);
+    console.log(balance);
     if (!validate(add, 'Deposit Amount')) {
     return;
     }
-    setBalance(balance + add);
+    updateBalance(parseFloat(balance) + parseFloat(add));
     setShow(false);
   }    
 
@@ -35,7 +37,7 @@ function Deposit(){
       body={show ? (  
               <>
               Deposit<br/>
-              <input type="input" className="form-control" id="add" placeholder="Amount to Deposit" value={add} onChange={e => setAdd(e.currentTarget.value)} /><br/>
+              <input type="number" className="form-control" id="add" placeholder="Amount to Deposit" onChange={e => setAdd(e.currentTarget.value)} /><br/>
               <button type="submit" className="btn btn-light" onClick={handleCreate}>Deposit</button>
               </>
             ):(

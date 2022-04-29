@@ -7,7 +7,7 @@ function Balance(){
       bgcolor="info"
       txtcolor="black"
       title="Balance"
-      text={"$" + balance}
+      text={"$" + parseFloat(balance).toFixed(2)}
     />    
   );  
 }
