@@ -14,9 +14,17 @@ function Withdraw(){
       setReady(true)}
   }
 
-  function validate(field, label){
-      if ((subtract<0 || balance < subtract) || isNaN(subtract) ) {
-        setStatus('Error: ' + label);
+  function validate(){
+      if (subtract<0) {
+        setStatus('Error: must enter positive numbers only');
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      } else if(balance < subtract) {
+        setStatus('Error: transaction failed');
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      } else if( isNaN(subtract) ) {
+        setStatus('Error: must enter a numeric value only');
         setTimeout(() => setStatus(''),3000);
         return false;
       } else {
@@ -31,11 +39,6 @@ function Withdraw(){
     updateBalance(parseFloat(balance) - parseFloat(subtract));
     setShow(false);
   }    
-
-  function clearForm(){
-    setSubtract('');
-    setShow(true);
-  }
 
   //input type="number" would be better for deposit, but then, you will not get a NaN error
   return (

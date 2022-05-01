@@ -1,7 +1,7 @@
 # bank-project
 Module 2 bank project that uses React, AWS, and everything I used in Module 1.
 
-<img src= "bank.jpg" width='300'/>
+<img src= "Your-Town-Bank.jpg" width='300'/>
  
 #### Installation:
  

@@ -14,9 +14,13 @@ function Deposit(){
       setReady(true)}
   }
 
-  function validate(field, label){
-      if ((add <= 0) || isNaN(add) ) {
-        setStatus('Error: ' + label);
+  function validate(){
+      if ((add <= 0)) {
+        setStatus('Error: must enter positive numbers only');
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      }else if(isNaN(add)) {
+        setStatus('Error: must enter a numeric value only');
         setTimeout(() => setStatus(''),3000);
         return false;
       } else{
@@ -31,11 +35,6 @@ function Deposit(){
     updateBalance(parseFloat(balance) + parseFloat(add));
     setShow(false);
   }    
-
-  function clearForm(){
-    setAdd('');
-    setShow(true);
-  }
 
 //input type="number" would be better for deposit, but then, you will not get a NaN error
   return (
