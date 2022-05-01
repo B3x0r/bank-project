@@ -5,11 +5,11 @@ Module 2 bank project that uses React, AWS, and everything I used in Module 1.
  
 #### Installation:
  
-You could have to get your own AWS account and set up a bucket to put it into, but it would be easier to just check mine out at: 
+You could have to get your own AWS account and set up a bucket to put it into, but it would be easier to just check mine out at: https://rebecca-durst-banking-application.s3.amazonaws.com/index.html#/
  
 #### Usage:
  
-You will be able to create an account and keep track account info. You will also be able to withdrawl and deposit into "your account".
+You will be able to create an account and keep track account info. You will also be able to withdraw and deposit into "your account".
  
 #### Support: 
  
