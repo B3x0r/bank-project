@@ -1,21 +1,33 @@
-/*Manatee rgb(160, 164, 184);
-Lavander Web rgb(216, 221, 239);
-Light Slate Gray rgb(114, 147, 1600;
-
-Platinum rgb(220, 224, 217);
-Dark Purple rgb(49, 8, 31);
-Persian Plum rgb(107, 15, 26);
-Davys Grey rgb(89, 89, 89);
-Xanadu rgb(128, 143, 133); no
-*/
-
 :root{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 15%, rgba(95,186,180,1) 44%, rgba(0,212,255,1) 100%);
+  background: rgb(23,162,184);
+  background: linear-gradient(270deg, rgba(23,162,184,1) 0%, rgba(100,89,78,1) 100%);
+}
+
+/* navbar color */
+.navbar {
+  background-color: rgb(215, 145, 119);
+}
+
+/* mouse over link navbar navbar-expand-lg navbar-light info*/
+.navbar a:hover {
+  background-color: rgb(150, 55, 21);
+  color: white !important;
+}
+
+.navbar a.active {
+  background-color: rgb(23,162,184);
+}
+
+.tooltip .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
 body {
-  background: var(--background-color);
+  background-color: var(--background-color) !important;
   font-family: Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -27,20 +39,6 @@ body {
 
 .caption3 {
   color: rgb(128, 143, 133);
-}
-
-/* mouse over link */
-.navbar-light .navbar-nav .nav-link:hover {
-  background-color: rgb(160, 164, 184);
-  color:rgb(49, 8, 31);
-}
-
-.tooltip .tooltiptext {
-  width: 120px;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-  /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
 .h1 {
