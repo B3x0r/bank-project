@@ -1,6 +1,6 @@
 # bank-project
 
-####Description
+#### Description
 Module 2 bank project that uses React, AWS, and everything I used in Module 1 (HTML, Javascript, Boostrap). This is an app to show what I have learned, but could also be used to keep track of allowance or something similar that didn't need security.
 
 <img src= "Your-Town-Bank.jpg" width='300'/>
